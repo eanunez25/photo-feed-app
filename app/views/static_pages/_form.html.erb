@@ -1,0 +1,6 @@
+<%= form_with url: root_path, method: "get", local: true do %>
+  <%= label_tag :id %>
+  <%= text_field_tag :id %>
+
+  <%= submit_tag "Get photos" %>
+<% end %>

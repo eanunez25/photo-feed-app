@@ -1,0 +1,14 @@
+<h1>Photo Feed</h1>
+
+<% if @user_id %>
+  <p>User ID: <%= @user_id%></p>
+  <p>Username: <%= @user.username %> (<%= @user.photos.count %> photos)</p>
+  <%= render 'form' %>
+
+  <% @urls.each do |url| %>
+    <%= image_tag(url) %>
+  <% end %>
+
+<% else  %>
+  <%= render 'form' %>
+<% end %>
